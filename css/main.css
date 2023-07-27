@@ -1,0 +1,184 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+/*CONTAINER*/
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto; /*will center automatic*/
+}
+/*CONTAINER*/
+
+
+/*HEADER = Logo & Navigations*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+            /*Use "rem" for fonts & "em" for other stuffs*/
+nav{
+    margin: 4em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 4.1em;
+    margin: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+        /*Underline design when hovered*/
+nav ul li a.active:before{
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+        /*Underline design when hovered*/
+
+
+/*HEADER*/
+
+
+/*LEFT IMAGE & RIGHT IMAGE CONTAINER*/
+main{
+    display: flex;
+    gap: 8em;
+    margin-top: 11em;
+}
+/*LEFT IMAGE & RIGHT IMAGE CONTAINER*/
+
+
+/*LEFT IMAGE*/
+.left-col {
+    width: 45%;
+}
+
+    /*Quality apparel without the price tag*/
+h1{
+    font-size: 5.2rem;   
+    font-family: 'playfair display';
+    font-weight: normal;
+    margin: 0;
+}
+
+    /*No need to spend $xxx on apparel just for the name's sake. Our premium apparel is made from the same stuff.*/
+.subhead{
+    font-size: 1.8rem;
+}
+    /*No need to spend $xxx on apparel just for the name's sake. Our premium apparel is made from the same stuff.*/
+
+
+
+
+    /*"Browse our collection" & "Spring '23 Collection" container*/
+.cta-btns, .secondary-cta{
+    display: flex;
+    gap: 2em;
+}
+
+.cta-btns{
+    margin: 5em 0;
+}
+    /*"Browse our collection" & "Spring '23 Collection" container*/
+
+
+    /*Browse our collection*/
+.primary-cta{
+    background-color: #f1e2d1;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 1.9em;
+    padding: 1em 2em; /*mag adjust sang sulod ka container/ mgpa center ka text*/
+}
+    /*Browse our collection*/
+
+
+    /*Spring '23 Collection & --> */
+.secondary-cta{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    display: block; /*nd mag nag ang text / ma 1 line lg*/
+    padding: 1em 0;
+    align-items: center;
+}
+    /*Spring '23 Collection & --> */
+
+    /*SVG*/
+.secondary-cta svg{
+    width: 20px;
+}
+    /*SVG*/
+
+
+/*50K News & We’re proud to announce that we now CONTAINER*/
+.news{
+    display: flex;
+    gap: 3em;
+    padding: 5em;
+    border: 1px solid black;
+    border-radius: .8em;
+    position: relative;
+}
+/*50K News & We’re proud to announce that we now CONTAINER*/
+
+/*confetti*/
+.news:before{
+    position: absolute;
+    content: "";
+    background: url('../Images/confetti.svg');
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: -20px;
+    z-index: 2;
+}
+/*confetti*/
+
+/*50K*/
+p.employees{
+    font-size: 3.3rem;
+    margin: 0;
+    font-weight: 400;
+    line-height: 100%;
+}
+/*50K*/
+
+/*We’re proud to announce that we now */
+p.details{
+    font-size: 1.4rem;
+    margin: 0;
+}
+/*We’re proud to announce that we now */
+
+
+/*50K News & We’re proud to announce that we now CONTAINER*/
+
+/*LEFT IMAGE*/
+
+/*RIGHT IMAGE*/
+.right-col {
+    flex-grow: 1; /*extends width of remaining percentage of 45%*/
+}
+
+/*RIGHT IMAGE*/
