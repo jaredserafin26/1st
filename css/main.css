@@ -51,7 +51,22 @@ nav ul li a.active:before{
     border-bottom: 2px solid black;
     bottom: -6px;
 }
+
+
         /*Underline design when hovered*/
+
+/*Microinteractions Effect  in Navigation*/
+nav ul li a:before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(122, 122, 122);
+    bottom: -6px;
+    transition:  width .3s;
+
+}
+/*Microinteractions Effect  in Navigation*/
 
 
 /*HEADER*/
@@ -121,12 +136,14 @@ h1{
     display: block; /*nd mag nag ang text / ma 1 line lg*/
     padding: 1em 0;
     align-items: center;
+  
 }
     /*Spring '23 Collection & --> */
 
     /*SVG*/
 .secondary-cta svg{
     width: 20px;
+    transition: transform .3s;
 }
     /*SVG*/
 
@@ -181,4 +198,153 @@ p.details{
     flex-grow: 1; /*extends width of remaining percentage of 45%*/
 }
 
+.right-col{
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+        "left right"
+        "left bottom";
+}
+
+.card{
+    border-radius: .8em;
+    background-color: red;
+    padding: 1.1em;
+    display: flex; /*gin gamit para ma use ang align-items*/
+    align-items: end;
+    background-size: 150%;
+    transition: background-size 800ms;
+ }
+
+
+.card1{
+    grid-area: left;
+    background-image: url('/Images/clothing1.jpg');
+    position: relative;
+}
+
+/*tag svg*/
+.card1:before {
+    position: absolute;
+    content: "";
+    background: url('../Images/tag.svg') no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: -30px;
+    pointer-events: none;
+}
+
+/*tag svg*/
+
+.card2{
+    grid-area: right;
+    background-image: url('/Images/clothing2.jpg');
+
+}
+
+.card3{
+    grid-area: bottom;
+    background-image: url('/Images/clothing3.jpg');
+
+}
+
+.card-details{
+    background: white;
+    border-radius: .6em;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 800ms;
+}
+
+.card-details a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card-details p{
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.product-price {
+    font-size: 1.8rem;
+}
+
+
 /*RIGHT IMAGE*/
+
+/*Microinteractions Effect  in Navigation*/
+nav ul li a:hover:before{
+    width: 35%;
+}
+
+/*Microinteractions Effect  in Navigation*/
+
+/*Microinteractions Effect  in Browse Collection*/
+.primary-cta:hover{
+    background: #e2d1bd;
+}
+
+/*Microinteractions Effect  in Browse Collection*/
+
+
+/*Microinteractions Effect  in Spring 23 Collection*/
+.secondary-cta:hover svg{
+    transform: translateX(10px);
+}
+
+.secondary-cta:hover {
+    text-decoration: underline;
+}
+/*Microinteractions Effect  in Spring 23 Collection*/
+
+/*Card1 Animation*/
+.card:hover{
+    background-size: 160%;
+}
+
+.card:hover .card-details{
+    transform: translateY(-20px);
+}
+
+/*Card1 Animation*/
+
+/*Intro Animation*/
+.overlay{
+    position: absolute;
+    z-index: 999;
+    background: white;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1s ease-in forwards;
+    transform-origin: bottom;
+}
+
+@keyframes reveal{
+    from{
+        transform: scaleY(1);
+    }
+    to{
+        transform: scaleY(0);
+    }
+}
+
+main{
+    animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: scale(.4);
+}
+
+@keyframes growIn{
+    to{
+        transform: scale(1);
+    }
+}
+/*Intro Animation*/
